@@ -31,6 +31,7 @@ summary::-webkit-details-marker {
     background-color: #141024;
 
     &__head {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -59,12 +60,22 @@ summary::-webkit-details-marker {
     }
 }
 
+.menu-images {
+    position: absolute;
+    //visibility: hidden;
+    top: -100px;
+}
+
 .phone-number {
     font-size: 30px;
     font-weight: 600;
     line-height: 48px;
     text-align: right;
     color: #FFFFFF;
+}
+
+.phone-span {
+    visibility: hidden;
 }
 
 .top {
@@ -123,6 +134,119 @@ summary::-webkit-details-marker {
         max-width: 783px;
         max-height: 918px;
     }
+}
+
+@media (max-width: 1024px) {
+    html {
+        overflow: hidden;
+    }
+
+    .center {
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .header__head {
+        position: relative;
+    }
+
+    .phone-number {
+        visibility: hidden;
+    }
+
+    .burger-image {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .phone-image {
+        position: absolute;
+        top: 34px;
+        right: 30px;
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .image-menu {
+        width: 44px;
+        height: 44px;
+    }
+
+    .top__img {
+        width: 273px;
+        height: 320px;
+    }
+
+    .header__head {
+        position: relative;
+    }
+
+    .top {
+        margin-top: 47px;
+    }
+
+    .top__left__title {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .top__left__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25.6px;
+        text-align: left;
+    }
+
+    .top__left {
+        padding-top: 0px;
+        padding-left: 0px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .burger-label{
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        top: 34px;
+        right: -36px;
+    }
+
+    #burger {
+        position: absolute;
+        left: -9999999px;
+        visibility: hidden;
+        &:checked ~ .menu {
+            right: -130px;
+        } 
+    }
+
+    .menu {
+        background: #141024;
+        width: 200px;
+        //height: 617;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 136px;
+        right: -330px;
+        position: absolute;
+        padding: 32px;
+        box-sizing: border-box;
+        transition: right .3s;
+        z-index: 1;
+    }
+
+
 }
 
 

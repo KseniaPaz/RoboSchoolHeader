@@ -43,6 +43,22 @@ summary::-webkit-details-marker {
   color: #FFFFFF;
 }
 
+#burger {
+  position: absolute;
+  left: -9999999px;
+  visibility: hidden;
+}
+
+.burger-label {
+  visibility: hidden;
+  position: absolute;
+}
+
+.phone-image {
+  position: absolute;
+  visibility: hidden;
+}
+
 .menu {
   width: 324px;
   display: flex;
@@ -56,21 +72,12 @@ summary::-webkit-details-marker {
   color: #FFFFFF;
 }
 
-.menu-images {
-  position: absolute;
-  top: -100px;
-}
-
 .phone-number {
   font-size: 30px;
   font-weight: 600;
   line-height: 48px;
   text-align: right;
   color: #FFFFFF;
-}
-
-.phone-span {
-  visibility: hidden;
 }
 
 .top {
@@ -147,6 +154,7 @@ summary::-webkit-details-marker {
     height: 44px;
   }
   .phone-image {
+    visibility: visible;
     position: absolute;
     top: 34px;
     right: 30px;
@@ -192,6 +200,7 @@ summary::-webkit-details-marker {
     position: absolute;
     top: 34px;
     right: -36px;
+    visibility: visible;
   }
   #burger {
     position: absolute;
